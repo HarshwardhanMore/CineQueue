@@ -6,6 +6,17 @@ generator client {
 }
 
 datasource db {
-  provider = "postgresql"
+  provider = "mongodb"
   url      = env("DATABASE_URL")
+}
+
+model Movie {
+  id          String   @id @default(auto()) @map("_id") @db.ObjectId
+  name        String
+  description String
+  status      String
+  genre       String[]
+  creatorId   String
+  createdDate DateTime @default(now())
+  updatedDate DateTime @updatedAt
 }
