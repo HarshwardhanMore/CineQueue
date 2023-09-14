@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function Home() {
   return (
     <>
-      <div>Hello World</div>
+      <div>Hello World CineQueue</div>
     </>
   );
 }
